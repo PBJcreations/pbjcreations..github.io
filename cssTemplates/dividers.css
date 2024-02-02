@@ -1,0 +1,39 @@
+/* Dashed border */
+hr.dashed {
+  border-top: 3px dashed #bbb;
+}
+
+/* Dotted border */
+hr.dotted {
+  border-top: 3px dotted #bbb;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+div{
+    margin-bottom:25px;
+}
+hr.tapered{ 
+    display:block;
+    border:none;
+    height:1px;
+    background:black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#3E7D8C), to(#E0E0E0));
+}
+
+hr.taperedGold{ 
+    display:block;
+    border:none;
+    height:1px;
+    background:black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#C29145), to(#30616E));
+}
