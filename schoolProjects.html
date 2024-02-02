@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<title>PBJcreations</title>
+<link rel="shortcut icon" type="image/png" href="Images/BlueLogo-NoBG.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="cssTemplates/imagePopup.css">
+<link rel="stylesheet" href="cssTemplates/slideshow.css">
+<link rel="stylesheet" href="cssTemplates/dividers.css">
+<style>
+img.interactiveImg {
+  filter: url(filters.svg#grayscale);
+  /* Firefox 3.5+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(.8);
+  /* Google Chrome & Safari 6+ */
+}
+img.interactiveImg:hover {
+  filter: none;
+  -webkit-filter: none;
+}
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+.button {
+  border: none;
+  color: #C29145;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.buttonBlue {background-color: #3E7D8C;} /* Blue */
+
+</style>
+<body class="w3-content" style="max-width:1600px; background-color:#E0E0E0">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px;background-color:#3E7D8C;color:#C29145;" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16" style="background-color:#3E7D8C;">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>PBJcreations</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large" style="font-weight:bold;background-color:#3E7D8C;color:#C29145;">
+    <a href="index.html" class="w3-bar-item w3-button" >About Parker</a>
+    <a href="schoolProjects.html" class="w3-bar-item w3-button" style="background-color:#30616E;">School Projects</a>
+    <a href="workProjects.html" class="w3-bar-item w3-button">Work Projects</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn" style="color:#C29145;">
+      Hobbies <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium w3-show">
+      <a href="drawingPage.html" class="w3-bar-item w3-button">Drawing</a>
+      <a href="photoshopPage.html" class="w3-bar-item w3-button">Photoshop</a>
+      <a href="woodworkingPage.html" class="w3-bar-item w3-button">Woodworking</a>
+    </div>
+
+  </div>
+  <!--a href="#footer" class="w3-bar-item w3-button w3-padding" style="background-color:#3E7D8C;color:#C29145;">Contact</a--> 
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-xlarge" style="background-color:#3E7D8C;color:#C29145;">
+  <div class="w3-bar-item w3-padding-24 w3-wide">PBJcreations</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+<!-- ABOUT PARKER PAGE -->
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left w3-hide-medium w3-hide-large">School Projects</p>                                <!--Page Tilte at top-->
+    <!--<p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>-->
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container w3-margin-bottom">
+    <img src="SchoolProjects/BigBrainBlueBG.jpg" alt="Cartoon Parker" style="width:100%" >
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">School</h1>
+      <h1 class="w3-jumbo w3-hide-small">Projects</h1>
+
+      <h1 class="w3-hide-small"></h1>                      <!--Image Header Blurb-->
+      <!--<p><a href="#jeans" class="w3-button w3-black     //Button
+         w3-padding-large w3-large">SHOP NOW</a></p>-->
+    </div>
+  </div>
+
+  <!-- IMAGE PROCESSING PROJECT -->
+  <div class="w3-row w3-margin-bottom" style="background-color:#E0E0E0">
+    <hr class="tapered">
+    <p style="text-align: center; color:#30616E;font-size: larger;margin-bottom: 0px;"><b>Programming With OpenCV Face Detection</b></p>
+    <p style="text-align: center; color:#3E7D8C;font-size: small;margin-top: 0mm;"><b>Image Processing</b></p>
+    <div class="w3-container w3-center w3-text-grey" style="max-width: 1000px;margin: auto;">
+      <p style="text-align:left;max-width: 1000px;font-size: small;" id="Subtitle">During my Image Processing Class I took at UNO, I learned a lot about how images and videos are compressed through the use of kernels. These kernel algorithms can create blur effects, hue shifts, saturation adjustments, auto-contrast, etc. by tweaking a small group of pixels at a time. I was eager to experiment with AI and Face detection using a popular API for Python called OpenCV. Essentially this contains resources for AI facial pattern detection. My class project took a PNG photo of a mustache and aligned it over a live video feed of someone's face by blending the alpha layers. This was a cool little project to explore a rising sector of technology in digital image processing and Artificially Intelligent programs.</p>
+    </div>
+    <div class="w3-center">
+      <iframe title="ImageProcPresentation" width="384" height="216" allowTransparency="true" mozallowfullscreen webkitallowfullscreen allowfullscreen style="background-color:transparent; align-self: center;min-width: 100px;" frameBorder="0" src="https://app.vidgrid.com/embed/uApdE0BKf29h"></iframe>
+    </div>
+  </div>
+
+  <!-- GAME PROG  PROJECT -->
+  <div class="w3-row w3-margin-bottom" style="background-color:#E0E0E0">
+    <hr class="tapered">
+    <p style="text-align: center; color:#30616E;font-size: larger;margin-bottom: 0px;"><b>State Machines and Calculating Collisions</b></p>
+    <p style="text-align: center; color:#3E7D8C;font-size: small;margin-top: 0mm;"><b>Intro to Game Programming</b></p>
+    <div class="w3-center w3-col 16 s6">
+      <!-- Tanks Game -->
+      <p style="text-align: center;color:#3E7D8C;font-size: small;">Tanks Game</p>
+      <iframe title="Tanks Video 3" class="w3-hide-large" width="384" height="90" allowTransparency="true" mozallowfullscreen webkitallowfullscreen allowfullscreen style="background-color:transparent;width:70%" frameBorder="0" src="https://app.vidgrid.com/embed/g3UyZWxH2Ww7"></iframe>
+      <iframe title="Tanks Video 3" class="interactiveImg w3-hide-small w3-hide-medium" width="384" height="216" allowTransparency="true" mozallowfullscreen webkitallowfullscreen allowfullscreen style="background-color:transparent;width:70%" frameBorder="0" src="https://app.vidgrid.com/embed/g3UyZWxH2Ww7"></iframe>
+      <div class="w3-container w3-center w3-text-grey" style="max-width: 1000px;">
+        <p style="text-align:left;max-width: 1000px;font-size: small;" id="Subtitle">For my final project of the course, I created a 2-player versus tank game. I incorporated collision detection algorithms for points and rectangles like we learned from class. There are 5 random game levels. The first person to get 5 points wins. The way this html game works is by calculating all the vertices (points) of each shape, then draws them in with certain colors. It then receives user input from the keyboard to update the locations of each vertex. It repeats this process faster than the human eye can detect. For collisions, the game calculates if a point is intersecting another object and handles it according to the conditions at hand.</p>
+      </div>
+      <div>
+        <a href="SchoolProjects/Tank Game/index.html" class="button buttonBlue w3-bar-item w3-button"  >Play Now</a>
+      </div>
+    </div>
+    <div class="w3-center w3-col 16 s6">
+      <!-- Tron Game -->
+      <p style="text-align: center;color:#3E7D8C;font-size: small;">Tron Game</p>
+      <div id="10" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img10" src="Images/School/TronGameScreenShot.jpg" style="max-width: 384px;" class="interactiveImg w3-hide-small w3-hide-medium">
+        <img id="Img10" src="Images/School/TronGameScreenShot.jpg" style="max-width: 384px;width: 85%;" class="w3-hide-large">
+      </div>
+      <!-- <iframe title="Tanks Video 3" width="384" height="216" allowTransparency="true" mozallowfullscreen webkitallowfullscreen allowfullscreen style="background-color:transparent;width:70%" frameBorder="0" src="https://app.vidgrid.com/embed/g3UyZWxH2Ww7"></iframe> -->
+      <div class="w3-container w3-center w3-text-grey" style="max-width: 1000px;margin: auto;">
+        <p style="text-align:left;max-width: 1000px;font-size: small;" id="Subtitle">Earlier in the semester, I really wanted to understand how html and JavaScript worked to run a game. I followed a brief tutorial on the subject, resulting in a clone of the classic game, "Snake". After running wild with curiosity playing with the code, I discovered how to have two players at once. I also discovered how to create point-to-point collision detection for both players. After I got the base game down, I spent a great deal exploring the stylization and formatting of the game aesthetics. I also discovered I could create buttons on the side of the screen so that you could play it on your phone. However, due to the limitations of my knowledge of HTML, only one button could be pressed at one given moment of time.</p>
+      </div>
+      <div>
+        <a href="SchoolProjects/TronGame.html" class="button buttonBlue w3-bar-item w3-button"  >Play Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADV COMP AI PAPER -->
+  <div class="w3-row w3-margin-bottom" style="background-color:#E0E0E0">
+    <hr class="tapered">
+    <p style="text-align: center; color:#30616E;font-size: larger;margin-bottom: 0px;"><b>Exploring Artifical Intelligence in Computer Science</b></p>
+    <p style="text-align: center; color:#3E7D8C;font-size: small;margin-top: 0mm;"><b>Advanced Composition for IS&T</b></p>
+    <div class="w3-center w3-text-grey w3-container" style="max-width: 1000px;margin: auto;">
+      <p style="text-align:left;max-width: 1000px;font-size: small;" id="Subtitle">Through my years pursuing a bachelor’s in computer science, I've become more interested in Artificial Intelligence (AI). For my Advanced Composition for IS&T course, I decided to research and write about AI. Read my full research paper below. (If preview doesn’t appear, please click below to download and view)</p>
+    </div>
+    <div class="w3-center">
+      <!-- Referenced for PDF HTML: http://jsgyan.blogspot.com/2017/12/how-to-display-pdf-in-html-web-page.html -->
+      <object data="SchoolProjects/AdvCompAiPaper.pdf" type="application/pdf" width="600" height="500" class="interactiveImg w3-hide-small w3-hide-medium">
+        <a href="SchoolProjects/AdvCompAiPaper.pdf">ArtificialIntelligencePaper.pdf</a>
+      </object>
+      <object data="SchoolProjects/AdvCompAiPaper.pdf" type="application/pdf" width="300" height="250" class="w3-hide-large">
+        <a href="SchoolProjects/AdvCompAiPaper.pdf">ArtificialIntelligencePaper.pdf</a>
+      </object>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="w3-small w3-center" id="footer" style="background-color: #E0E0E0;">
+    <div class="w3-row-padding">
+      <div class="w3-container">
+        <hr class="tapered">
+        <h4 style="color:#30616E;"><b>About</b></h4>
+        <p><a href="index.html">About Parker</a></p>
+        <h4 style="color:#30616E;"><b>Social Media</b></h4>
+        <p><i class="fa fa-fw fa-envelope"></i> parker.pbjensen@gmail.com</p>
+        <p><i class="fa fa-instagram w3-hover-opacity w3-large"></i> @parker.pbj.jensen</p>
+        <p><i class="fa fa-linkedin w3-hover-opacity w3-large"></i> @Parker Jensen</p>
+        <!--<i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>-->
+
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-center w3-padding-24" style="background-color:#3E7D8C;color:#C29145;">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity" style="background-color:#3E7D8C;color:#C29145;">w3.css</a></div>
+
+  <!-- End page content -->
+</div>
+
+<!-- The Modal: When click on images, zooms in-->
+<div id="Modal" class="modal" style="display: none;">
+  <!-- The Close Button -->
+  <span id="2" onClick="clickedClose(this.id)" class="close">&times;</span>
+  <!-- Modal Content (The Image) -->
+  <img style="padding-left: 150px;" class="modal-content w3-hide-small w3-hide-medium" id="ModalImg">
+  <img style="margin: auto" class="modal-content w3-hide-large" id="ModalImgMobile">
+  <!-- Modal Caption (Image Text) -->
+  <div id="Caption"></div>
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+<script src="imagePopup2.js"></script>
+<script src="slideshow.js"></script>
+
+<script>
+// Accordion
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+
+</body>
+</html>

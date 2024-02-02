@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html>
+<title>PBJcreations</title>
+<link rel="shortcut icon" type="image/png" href="Images/BlueLogo-NoBG.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="cssTemplates/imagePopup.css">
+<link rel="stylesheet" href="cssTemplates/slideshow.css">
+<link rel="stylesheet" href="cssTemplates/dividers.css">
+<style>
+img.interactiveImg {
+  filter: url(filters.svg#grayscale);
+  /* Firefox 3.5+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(.8);
+  /* Google Chrome & Safari 6+ */
+}
+img.interactiveImg:hover {
+  filter: none;
+  -webkit-filter: none;
+}
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+</style>
+<body class="w3-content" style="max-width:1600px; background-color:#E0E0E0">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px;background-color:#3E7D8C;color:#C29145;" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16" style="background-color:#3E7D8C;">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>PBJcreations</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large" style="font-weight:bold;background-color:#3E7D8C;color:#C29145;">
+    <a href="index.html" class="w3-bar-item w3-button" style="background-color:#30616E;">About Parker</a>
+    <a href="schoolProjects.html" class="w3-bar-item w3-button">School Projects</a>
+    <a href="workProjects.html" class="w3-bar-item w3-button">Work Projects</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn" style="background-color:#3E7D8C;color:#C29145;">
+      Hobbies <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium w3-show">
+      <a href="drawingPage.html" class="w3-bar-item w3-button">Drawing</a>
+      <a href="photoshopPage.html" class="w3-bar-item w3-button">Photoshop</a>
+      <a href="woodworkingPage.html" class="w3-bar-item w3-button">Woodworking</a>
+    </div>
+
+  </div>
+  <!--a href="#footer" class="w3-bar-item w3-button w3-padding" style="background-color:#3E7D8C;color:#C29145;">Contact</a--> 
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-xlarge" style="background-color:#3E7D8C;color:#C29145;">
+  <div class="w3-bar-item w3-padding-24 w3-wide">PBJcreations</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+<!-- ABOUT PARKER PAGE -->
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px;">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left w3-hide-medium w3-hide-large">About Parker</p>                                <!--Page Tilte at top-->
+    <!--<p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>     
+      <i class="fa fa-search"></i>
+    </p>-->
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container w3-margin-bottom">
+    <img src="Images/Drawing/ParkerLineCartoonedWide.jpg" alt="Cartoon Parker" style="width:100%" >
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">About Parker</h1>
+
+      <h1 class="w3-hide-small"> </h1>                      <!--Image Header Blurb-->
+      <!--<p><a href="#jeans" class="w3-button w3-black     //Button
+         w3-padding-large w3-large">SHOP NOW</a></p>-->
+    </div>
+  </div>
+
+   <!-- BIO -->
+   <div>
+    <div class="w3-container w3-text-grey" id="Subtitle" Style="font-size: larger;">
+      <hr class="tapered">
+      <p style="text-align: center; color:#30616E;font-size: larger;margin-bottom: 0px;"><b>About Me</b></p>
+      <p style="text-align: center; color:#3E7D8C;font-size: small;margin-top: 0mm;"><b>Bio</b></p>
+      <div class="w3-center" style="max-width: 1000px;margin: auto;">
+        <p style="text-align:left;max-width: 1000px;font-size: small;">Parker Jensen is currently pursuing a bachelor’s degree in Computer Science at the University of Nebraska, Omaha (UNO). He has been involved in multiple organizations on campus such as planning student events with Maverick Productions or inspiring others' creativity as the President of UNO Maker Group. Parker currently works as a student engineering technician at the Biomechanics Research Building at UNO to design and fabricate prototypes for clients including medical devices, virtual reality software, and mechanical parts for larger projects. Parker is very grateful for his opportunities and eagerly waits for what is next. In his free time, you can find Parker woodworking, camping, drawing, or socializing with friends and family.</p>
+      </div>
+    </div>
+        <!-- Insert Photo Here -->
+   </div>
+
+  <!-- PROJECTS SECTION -->
+  <div>
+    <hr class="tapered">
+    <p style="text-align: center; color:#30616E;font-size: larger;margin-bottom: 0px;"><b>Projects</b></p>
+    <p style="text-align: center; color:#3E7D8C;font-size: small;margin-top: 0mm;"><b>Learning from Failure</b></p>
+
+    <!-- Product grid -->
+    <div class="w3-row w3-margin-bottom">
+      <!--Item Col-1 Row-1, (Top Left)-->
+      <div class="w3-col 13 s6">
+        <div class="w3-container">  
+          <a href="schoolProjects.html">   
+            <img src="SchoolProjects/BigBrainYellowBG.jpg" alt="Digital Brush Painting via Photoshop" style="width:100%;margin-bottom: 0px;" class="interactiveImg w3-hide-small w3-hide-medium ">
+            <img src="SchoolProjects/BigBrainYellowBG.jpg" alt="Digital Brush Painting via Photoshop" style="width:100%;margin-bottom: 0px;" class="w3-hide-large">
+            <p style="text-align: center; font-size: large;margin-bottom: -30px;" class="w3-hide-small w3-hide-medium"><b>School Projects</b></p>
+            <p style="text-align: center; font-size: small;margin-bottom: -30px;" class="w3-hide-large"><b>School Projects</b></p>
+          </a>
+        </div>
+      </div>
+
+      <!--Item Col-2 Row-1, (Mid Left)-->
+      <div class="w3-col 13 s6">
+        <div class="w3-container">
+          <a href="workProjects.html">
+            <img src="WorkProjects/VRdudeBlueBGWideYellow.jpg" style="width:100%;" class="interactiveImg w3-hide-small w3-hide-medium ">
+            <img src="WorkProjects/VRdudeBlueBGWideYellow.jpg" style="width:100%;" class="w3-hide-large">
+            <p style="text-align: center;font-size: larger;margin-bottom: -30px;" class="w3-hide-small w3-hide-medium"><b>Work Projects</b></p>
+            <p style="text-align: center;font-size: small; margin-bottom: -30px;" class="w3-hide-large"><b>Work Projects</b></p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  <!-- ABOUT THIS WEBSITE -->
+  <div>
+    <div class="w3-container w3-text-grey" id="Subtitle" Style="font-size: larger;">
+      <hr class="tapered">
+      <p style="text-align: center; color:#30616E;font-size: larger;margin-bottom: 0px;"><b>About This Website</b></p>
+      <p style="text-align: center; color:#3E7D8C;font-size: small;margin-top: 0mm;"><b>Learning HTML</b></p>
+      <div class="w3-center" style="max-width: 1000px;margin: auto;">
+        <p style="text-align:left;max-width: 1000px;font-size: small;">This website was created to showcase my projects from work, school, and my personal hobbies to my friends, family, and potential employers. Since many may know me as one that likes to try new things (For instance: learning HTML, CSS, and JavaScript to program this website!) this website helps me organize and reflect on the various skills and accomplishments along my journey. This personal project was a fun way to highlight the projects I’m so grateful to have had the pleasure to work on, while learning more about programming a website along the way. (FYI, my initials are P.B.J. hence the domain name!)</p>
+      </div>
+    </div>
+        <!-- Insert Photo Here -->
+  </div>
+
+  <!-- HOBBIES SECTION -->
+  <div>
+    <hr class="tapered">
+    <p style="text-align: center; color:#30616E;font-size: larger;margin-bottom: 0px;"><b>Hobbies</b></p>
+    <p style="text-align: center; color:#3E7D8C;font-size: small;margin-top: 0mm;"><b>Following Curiosity</b></p>
+
+    <!-- Product grid -->
+    <div class="w3-row w3-margin-bottom">
+      <!--Item Col-1 Row-1, (Top Left)-->
+      <div class="w3-col 13 s4">
+        <div class="w3-container">  
+          <a href="drawingPage.html">   
+            <img src="Images/Drawing/BarfParkerDrawing2.jpg" alt="Digital Brush Painting via Photoshop" style="width:100%" class="interactiveImg w3-hide-small w3-hide-medium ">
+            <img src="Images/Drawing/BarfParkerDrawing2.jpg" alt="Digital Brush Painting via Photoshop" style="width:100%" class="w3-hide-large">
+            <p style="text-align: center; font-size: large;" class="w3-hide-small w3-hide-medium"><b>Drawing</b></p>
+            <p style="text-align: center; font-size: small;" class="w3-hide-large"><b>Drawing</b></p>
+          </a>
+        </div>
+        <!--Item Col-1 Row-2, (2nd Down, Left)
+        <div class="w3-container">
+          <img src="Images/Photoshop/Camping 3D Planet Sky Square Vignette.jpg" style="width:100%">
+          <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+        </div>-->
+      </div>
+
+      <!--Item Col-2 Row-1, (Mid Left)-->
+      <div class="w3-col 13 s4">
+        <div class="w3-container">
+          <a href="photoshopPage.html">
+            <img src="Images/Photoshop/Flame Hand Portrait.jpg" style="width:100%;" class="interactiveImg w3-hide-small w3-hide-medium ">
+            <img src="Images/Photoshop/Flame Hand Portrait.jpg" style="width:100%;" class="w3-hide-large">
+            <p style="text-align: center;font-size: larger;" class="w3-hide-small w3-hide-medium"><b>Photoshop</b></p>
+            <p style="text-align: center;font-size: small;" class="w3-hide-large"><b>Photoshop</b></p>
+          </a>
+        </div>
+      </div>
+
+      <!--Item Col-3 Row-1, (Right Left)-->
+      <div class="w3-col 13 s4">
+        <div class="w3-container">
+          <a href="woodworkingPage.html">
+            <img src="Images/WoodWorking/Twisty Table 1.png" style="width:100%" class="interactiveImg w3-hide-small w3-hide-medium ">
+            <img src="Images/WoodWorking/Twisty Table 1.png" style="width:100%" class="w3-hide-large">
+            <p style="text-align: center;font-size:larger;" class="w3-hide-small w3-hide-medium"><b>WoodWorking</b></p>
+            <p style="text-align: center;font-size:small;" class="w3-hide-large"><b>WoodWorking</b></p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Contact Via Email section -->
+  <!--div class="w3-container w3-padding-32" style="background-color:#30616E;color:#C29145;">
+    <h1 style="text-align: center;">Contact me</h1>
+    <hr class="taperedGold">
+    <p style="text-align: center;">Got any questions? Want to talk?</p>
+    <div class="w3-container" style="margin: auto; width: 50%;">
+      <form method="post" name="contact_form" action="emailForm.php">
+        <p"><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required style="background-color:#E0E0E0"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required style="background-color:#E0E0E0"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required style="background-color:#E0E0E0"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required style="background-color:#E0E0E0"></p>
+        <button type="submit" class="w3-button w3-block w3-margin-bottom" style="background-color: #3E7D8C; width: 50%; margin: auto;">Send</button>
+      </form>
+    </div>
+  </div-->
+
+  
+  <!-- Footer -->
+  <footer class="w3-small w3-center" id="footer" style="background-color: #E0E0E0;">
+    <div class="w3-row-padding">
+      <div class="w3-container">
+        <hr class="tapered">
+        <h4 style="color:#30616E;"><b>About</b></h4>
+        <p><a href="index.html">About Parker</a></p>
+        <h4 style="color:#30616E;"><b>Social Media</b></h4>
+        <p><i class="fa fa-fw fa-envelope"></i> parker.pbjensen@gmail.com</p>
+        <p><i class="fa fa-instagram w3-hover-opacity w3-large"></i> @parker.pbj.jensen</p>
+        <p><i class="fa fa-linkedin w3-hover-opacity w3-large"></i> @Parker Jensen</p>
+        <!--<i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>-->
+
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-center w3-padding-24" style="background-color:#3E7D8C;color:#C29145;">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity" style="background-color:#3E7D8C;color:#C29145;">w3.css</a></div>
+
+  <!-- End page content -->
+</div>
+
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

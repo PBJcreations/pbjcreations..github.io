@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<title>PBJcreations</title>
+<link rel="shortcut icon" type="image/png" href="Images/BlueLogo-NoBG.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="cssTemplates/imagePopup.css">
+<link rel="stylesheet" href="cssTemplates/slideshow.css">
+<link rel="stylesheet" href="cssTemplates/dividers.css">
+<style>
+img.interactiveImg {
+  filter: url(filters.svg#grayscale);
+  /* Firefox 3.5+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(.8);
+  /* Google Chrome & Safari 6+ */
+}
+img.interactiveImg:hover {
+  filter: none;
+  -webkit-filter: none;
+}
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+</style>
+<body class="w3-content" style="max-width:1600px; background-color:#E0E0E0">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px;background-color:#3E7D8C;color:#C29145;" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16" style="background-color:#3E7D8C;">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>PBJcreations</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large" style="font-weight:bold;background-color:#3E7D8C;color:#C29145;">
+    <a href="index.html" class="w3-bar-item w3-button" >About Parker</a>
+    <a href="schoolProjects.html" class="w3-bar-item w3-button">School Projects</a>
+    <a href="workProjects.html" class="w3-bar-item w3-button">Work Projects</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn" style="background-color:#30616E;color:#C29145;">
+      Hobbies <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="drawingPage.html" class="w3-bar-item w3-button">Drawing</a>
+      <a href="photoshopPage.html" class="w3-bar-item w3-button">Photoshop</a>
+      <a href="woodworkingPage.html" class="w3-bar-item w3-button" style="background-color:#30616E;">Woodworking</a>
+    </div>
+
+  </div>
+  <!--a href="#footer" class="w3-bar-item w3-button w3-padding" style="background-color:#3E7D8C;color:#C29145;">Contact</a--> 
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-xlarge" style="background-color:#3E7D8C;color:#C29145;">
+  <div class="w3-bar-item w3-padding-24 w3-wide">PBJcreations</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+<!-- ABOUT PARKER PAGE -->
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left w3-hide-medium w3-hide-large">Hobbies > WoodWorking</p>                                <!--Page Tilte at top-->
+    <!--<p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>-->
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container w3-margin-bottom">
+    <img src="Images/WoodWorking/WoodowrkingMediaConsoleWide.jpg" alt="Cartoon Parker" style="width:100%" >
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">Hobbies</h1>
+
+      <h1 class="w3-hide-small">> Woodworking</h1>                      <!--Image Header Blurb-->
+      <!--<p><a href="#jeans" class="w3-button w3-black     //Button
+         w3-padding-large w3-large">SHOP NOW</a></p>-->
+    </div>
+  </div>
+
+  <!-- UNOMG GRID -->
+  <div class="w3-row" style="background-color:#E0E0E0">
+    <hr class="tapered">
+    <p style="text-align: center; color:#30616E;font-size: larger;margin-bottom: 0px;"><b>UNO Maker Group</b></p>
+    <p style="text-align: center; color:#3E7D8C;font-size: small;margin-top: 0mm;"><b>Student Organization</b></p>
+
+    <!--Item Col-1 Row-1, (Top Left)-->
+    <div class="w3-col 13 s4">
+      <div id="21" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img21" src="Images/WoodWorking/Dining Table 1.jpg" alt="Digital Brush Painting via Photoshop" style="width:100%" class="interactiveImg w3-hide-small w3-hide-medium ">
+        <img id="Img21" src="Images/WoodWorking/Dining Table 1.jpg" alt="Digital Brush Painting via Photoshop" style="width:100%" class="w3-hide-large">
+      </div>
+      <div id="22" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img22" src="Images/WoodWorking/Coat Hanger 1.jpg" alt="Digital Brush Painting via Photoshop" style="width:100%" class="interactiveImg w3-hide-small w3-hide-medium ">
+        <img id="Img22" src="Images/WoodWorking/Coat Hanger 1.jpg" alt="Digital Brush Painting via Photoshop" style="width:100%" class="w3-hide-large">
+      </div>
+    </div>
+
+    <!--Item Col-2 Row-1, (Mid Left)-->
+    <div class="w3-col 13 s4">
+      <div id="23" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img23" src="Images/WoodWorking/UNOMG Sign 1.jpg" alt="UNOMG Sign" style="width:100%;" class="interactiveImg w3-hide-small w3-hide-medium ">
+        <img id="Img23" src="Images/WoodWorking/UNOMG Sign 1.jpg" alt="UNOMG Sign" style="width:100%;" class="w3-hide-large">
+      </div>
+      <div id="24" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img24" src="Images/WoodWorking/Giant Foosball Table 1.jpg" alt="UNOMG Sign" style="width:100%;" class="interactiveImg w3-hide-small w3-hide-medium ">
+        <img id="Img24" src="Images/WoodWorking/Giant Foosball Table 1.jpg" alt="UNOMG Sign" style="width:100%;" class="w3-hide-large">
+      </div>
+    </div>
+
+    <!--Item Col-3 Row-1, (Right Left)-->
+    <div class="w3-col 13 s4">
+      <div id="25" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img25" src="Images/WoodWorking/Hexagon Coffee Table 1.jpg" style="width:100%" class="interactiveImg w3-hide-small w3-hide-medium ">
+        <img id="Img25" src="Images/WoodWorking/Hexagon Coffee Table 1.jpg" style="width:100%" class="w3-hide-large">
+      </div>
+      <div id="26" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img26" src="Images/WoodWorking/Kneeling Stool 1.jpg" style="width:100%" class="interactiveImg w3-hide-small w3-hide-medium ">
+        <img id="Img26" src="Images/WoodWorking/Kneeling Stool 1.jpg" style="width:100%" class="w3-hide-large">
+      </div>
+    </div>
+  </div>
+
+  <!-- REPURPOSED PROJECTS GRID -->
+    <div>
+      <div class="w3-container w3-text-grey" id="Subtitle" Style="font-size: larger;">
+        <hr class="tapered">
+        <p style="text-align: center; color:#30616E;font-size: larger;margin-bottom: 0px;"><b>Repurposed Projects</b></p>
+        <p style="text-align: center; color:#3E7D8C;font-size: small;margin-top: 0mm;"><b>Recyling Trash Into Something Greater</b></p>
+        <div class="w3-center" style="max-width: 1000px;margin: auto;">
+          <!-- <p style="text-align:left;max-width: 1000px;">Write Desc Here</p> -->
+        </div>
+      </div>
+ 
+    <!--Item Col-1 Row-1, (Top Left)-->
+    <div class="w3-col 13 s4">
+      <div id="31" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img31" src="Images/WoodWorking/Twisty Table 1.png" alt="Digital Brush Painting via Photoshop" style="width:100%" class="interactiveImg w3-hide-small w3-hide-medium ">
+        <img id="Img31" src="Images/WoodWorking/Twisty Table 1.png" alt="Digital Brush Painting via Photoshop" style="width:100%" class="w3-hide-large">
+      </div>
+    </div>
+
+    <!--Item Col-2 Row-1, (Mid Left)-->
+    <div class="w3-col 13 s4">
+      <div id="33" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img33" src="Images/WoodWorking/RepurposedMDFskylineSquare.jpg" alt="UNOMG Sign" style="width:100%;" class="interactiveImg w3-hide-small w3-hide-medium ">
+        <img id="Img33" src="Images/WoodWorking/RepurposedMDFskylineSquare.jpg" alt="UNOMG Sign" style="width:100%;" class="w3-hide-large">
+      </div>
+    </div>
+
+    <!--Item Col-3 Row-1, (Right Left)-->
+    <div class="w3-col 13 s4">
+      <div id="35" onClick="clickedImg(this.id)" class="w3-container">
+        <img id="Img35" src="Images/WoodWorking/RecyledWheelBarrowSquare.jpg" style="width:100%" class="interactiveImg w3-hide-small w3-hide-medium ">
+        <img id="Img35" src="Images/WoodWorking/RecyledWheelBarrowSquare.jpg" style="width:100%" class="w3-hide-large">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-small w3-center" id="footer" style="background-color: #E0E0E0;">
+    <div class="w3-row-padding">
+      <div class="w3-container">
+        <hr class="tapered">
+        <h4 style="color:#30616E;"><b>About</b></h4>
+        <p><a href="index.html">About Parker</a></p>
+        <h4 style="color:#30616E;"><b>Social Media</b></h4>
+        <p><i class="fa fa-fw fa-envelope"></i> parker.pbjensen@gmail.com</p>
+        <p><i class="fa fa-instagram w3-hover-opacity w3-large"></i> @parker.pbj.jensen</p>
+        <p><i class="fa fa-linkedin w3-hover-opacity w3-large"></i> @Parker Jensen</p>
+        <!--<i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>-->
+
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-center w3-padding-24" style="background-color:#3E7D8C;color:#C29145;">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity" style="background-color:#3E7D8C;color:#C29145;">w3.css</a></div>
+
+  <!-- End page content -->
+</div>
+
+<!-- The Modal: When click on images, zooms in-->
+<div id="Modal" class="modal" style="display: none;">
+  <!-- The Close Button -->
+  <span id="2" onClick="clickedClose(this.id)" class="close">&times;</span>
+  <!-- Modal Content (The Image) -->
+  <img style="padding-left: 150px;" class="modal-content w3-hide-small w3-hide-medium" id="ModalImg">
+  <img style="margin: auto" class="modal-content w3-hide-large" id="ModalImgMobile">
+  <!-- Modal Caption (Image Text) -->
+  <div id="Caption"></div>
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+<script src="imagePopup2.js"></script>
+<script src="slideshow.js"></script>
+
+<script>
+// Accordion
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+
+</body>
+</html>
